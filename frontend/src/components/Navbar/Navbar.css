@@ -1,0 +1,130 @@
+
+.navbar {
+    background: linear-gradient(90deg, #8e44ad, #3498db);
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-logo span {
+    color: #ffe135;
+
+}
+
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+
+.navbar-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    margin: 0;
+}
+
+
+.navbar-links .nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-links .nav-link:hover {
+    color: #ffe135;
+}
+
+
+.nav-button .btn {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.nav-button .login-btn {
+    background: white;
+    color: #8e44ad;
+}
+
+.nav-button .login-btn:hover {
+    background: #8e44ad;
+    color: white;
+}
+
+.nav-button .signup-btn {
+    background: #ffe135;
+    color: #8e44ad;
+}
+
+.nav-button .signup-btn:hover {
+    background: #8e44ad;
+    color: #ffe135;
+}
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #8e44ad;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+        gap: 1.5rem;
+        z-index: 1000;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .nav-button .btn {
+        font-size: 1.2rem;
+        padding: 0.7rem 2rem;
+    }
+}
