@@ -1,6 +1,2 @@
-[build]
-  command = "npm run build"
-  publish = "build"
-
-[context.production.environment]
-  NODE_VERSION = "16"  # Replace "16" with the version you're using locally
+[build.environment]
+  NODE_VERSION = "20"
